@@ -8,63 +8,524 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 
 <body>
-    <div class="logo text-left pt-4 ps-4">
+    <!-- ***************************** logo section start ******************* -->
+    <div class="logo text-left pt-4 ps-4 position-sticky top-0 bg-white">
         <img src="./image/logo.png" alt="Testpan Logo">
     </div>
-    <div class="signup-container">
-        <div class="left-image"></div>
-        <div class="right-form">
-            <h3>Create your Account</h3>
+    <!-- ***************************** Logo section end ******************** -->
+
+
+    <!-- ****************** Signup section start ********************** -->
+    <div class="signup-section info-box active">
+        <div class="signup-container">
+            <div class="left-image"></div>
+            <div class="right-form">
+                <h3>Create your Account</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="abcd@gmail.com">
+                    </div>
+                    <!-- Password Field -->
+                    <div class="mb-3 position-relative">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control pr-5" id="password" placeholder="Enter password">
+                        <i class="bi bi-eye position-absolute" id="togglePasswordIcon"
+                            onclick="togglePassword('password', 'togglePasswordIcon')"
+                            style="top: 38px; right: 15px; cursor: pointer;"></i>
+                    </div>
+
+                    <!-- Confirm Password Field -->
+                    <div class="mb-3 position-relative">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control pr-5" id="confirmPassword"
+                            placeholder="Confirm password">
+                        <i class="bi bi-eye position-absolute" id="toggleConfirmPasswordIcon"
+                            onclick="togglePassword('confirmPassword', 'toggleConfirmPasswordIcon')"
+                            style="top: 38px; right: 15px; cursor: pointer;"></i>
+                    </div>
+
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="agree">
+                        <label class="form-check-label" for="agree">
+                            I agree to the <a href="#">Terms & Service</a> & <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 next-btn">Sign up</button>
+
+                    <div class="mt-3">
+                        Already have an account? <a href="#" class="login-link">Log in</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ****************** Signup section end ********************** -->
+
+
+    <!-- ******************** Email-verify-section start ******************* -->
+    <div class="Email-verify-section info-box">
+        <div class="verify-box">
+            <h4>Verify your Email</h4>
+            <p>Enter the 6 digit code sent to <strong>abcd@gmail.com</strong>. <br><a href="#">Change email</a></p>
+
+            <div class="otp-inputs">
+                <input type="text" maxlength="1" class="form-control" oninput="moveToNext(this, 0)">
+                <input type="text" maxlength="1" class="form-control" oninput="moveToNext(this, 1)">
+                <input type="text" maxlength="1" class="form-control" oninput="moveToNext(this, 2)">
+                <input type="text" maxlength="1" class="form-control" oninput="moveToNext(this, 3)">
+                <input type="text" maxlength="1" class="form-control" oninput="moveToNext(this, 4)">
+                <input type="text" maxlength="1" class="form-control" oninput="moveToNext(this, 5)">
+            </div>
+            <div class="resend mb-3">
+                Didn’t get a code? <a href="#">Resend</a>
+            </div>
+            <button class="btn btn-primary w-100 next-btn">Verify</button>
+        </div>
+    </div>
+    <!-- ******************** Email-verify-section end ******************* -->
+
+
+    <!-- ************************** Basic details section start ******************** -->
+    <div class="basic-details-section info-box">
+        <div class="details-box">
+            <h5>Step 1: Basic details</h5>
             <form>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="abcd@gmail.com">
+                    <label for="fullName" class="form-label">Full name*</label>
+                    <input type="text" class="form-control" id="fullName" value="Manish Sharma">
                 </div>
 
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <div class="input-group">
-                        <input type="password" class="form-control" id="password">
-                        <button type="button" class="btn btn-outline-secondary" onclick="togglePassword('password')">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                    </div>
+                    <label for="phoneNumber" class="form-label">Phone number*</label>
+                    <input type="tel" class="form-control" id="phoneNumber" value="+91887654321">
                 </div>
 
                 <div class="mb-3">
-                    <label for="confirmPassword" class="form-label">Confirm Password</label>
-                    <div class="input-group">
-                        <input type="password" class="form-control" id="confirmPassword">
-                        <button type="button" class="btn btn-outline-secondary"
-                            onclick="togglePassword('confirmPassword')">
-                            <i class="bi bi-eye"></i>
-                        </button>
-                    </div>
+                    <label for="dob" class="form-label">Date of Birth*</label>
+                    <input type="date" class="form-control" id="dob" value="1970-01-01">
                 </div>
 
-                <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" id="agree">
-                    <label class="form-check-label" for="agree">
-                        I agree to the <a href="#">Terms & Service</a> & <a href="#">Privacy Policy</a>
-                    </label>
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender*</label>
+                    <select class="form-select" id="gender">
+                        <option value="male" selected>Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100">Sign up</button>
-
-                <div class="mt-3">
-                    Already have an account? <a href="#" class="login-link">Log in</a>
-                </div>
+                <button type="submit" class="btn btn-primary w-100 next-btn">Next</button>
             </form>
         </div>
     </div>
 
-    <footer class=" d-flex justify-content-between align-items-center p-4">
+    <!-- ************************** Basic details section end ******************** -->
+
+
+    <!-- ****************************** Location details section start ************************ -->
+    <div class="location-details-section info-box">
+        <div class="location-box">
+            <h5>Step 2: Location details</h5>
+            <form>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="form-section">
+                            <label class="form-label">Present Address*</label>
+                            <label class="form-label mt-2">Enter Address</label>
+                            <input type="text" class="form-control" value="4/57, Shankar Road">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control" value="India">
+                            <label class="form-label">State</label>
+                            <input type="text" class="form-control" value="Maharashtra">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" value="Mumbai">
+                            <label class="form-label">Pin Code</label>
+                            <input type="text" class="form-control" value="112368">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-section">
+                            <label class="form-label">Permanent Address*</label>
+                            <label class="form-label mt-2">Enter Address</label>
+                            <input type="text" class="form-control" value="4/57, Shankar Road">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control" value="India">
+                            <label class="form-label">State</label>
+                            <input type="text" class="form-control" value="Maharashtra">
+                            <label class="form-label">City</label>
+                            <input type="text" class="form-control" value="Mumbai">
+                            <label class="form-label">Pin Code</label>
+                            <input type="text" class="form-control" value="112368">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end mt-4">
+                    <button type="button" class="btn btn-outline-secondary">Go back</button>
+                    <button type="submit" class="btn btn-primary next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ****************************** Location details section end ************************ -->
+
+
+    <!-- ********************************** Upload Government section start *********************** -->
+    <div class="upload-goverment-section info-box">
+        <div class="upload-box">
+            <h5>Step 3: Upload Government ID</h5>
+            <form>
+                <!-- Repeatable section -->
+                <div class="form-upload">
+                    <label class="upload-label">Aadhar Card*</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">PAN Card*</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Passport</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Drivers License</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Voter ID</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <button type="button" class="btn btn-outline-secondary">Go back</button>
+                    <button type="submit" class="btn btn-primary next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ********************************** Upload Government section end *********************** -->
+
+
+    <!-- ********************************* Education details section start ***************************** -->
+    <div class="education-details-section info-box">
+        <div class="upload-box">
+            <h5>Step 4: Education details</h5>
+            <form>
+                <div class="form-upload">
+                    <label class="upload-label">Highest level of Qualification*</label>
+                    <select class="form-select">
+                        <option selected>Graduate</option>
+                        <option>Postgraduate</option>
+                        <option>Diploma</option>
+                    </select>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">University/College Name*</label>
+                    <input type="text" class="form-control" value="Gangadhar University">
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Graduation Year*</label>
+                    <select class="form-select">
+                        <option selected>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                    </select>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Upload Graduation Certificate*</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Resume*</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <button type="button" class="btn btn-outline-secondary">Go back</button>
+                    <button type="submit" class="btn btn-primary next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ********************************* Education details section end ***************************** -->
+
+
+    <!-- ********************************* Professional Experience section start ******************** -->
+    <div class="Professional-Experience-section info-box">
+        <div class="upload-box">
+            <h5>Step 5: Professional Experience</h5>
+            <form>
+                <div class="form-upload">
+                    <label class="upload-label">Experience in Exam field*</label>
+                    <select class="form-select">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Experience in CBT or IBT or Both*</label>
+                    <select class="form-select">
+                        <option>Both, CBT & IBT</option>
+                        <option>CBT</option>
+                        <option>IBT</option>
+                    </select>
+                </div>
+
+                <div class="form-upload">
+                    <label class="upload-label">Online or Offline mode*</label>
+                    <select class="form-select">
+                        <option>Online</option>
+                        <option>Offline</option>
+                    </select>
+                </div>
+
+                <div class="experience-block">
+                    <div class="form-upload">
+                        <label class="upload-label">Company name</label>
+                        <input type="text" class="form-control" value="Shipra Pvt. Ltd.">
+                    </div>
+
+                    <div class="form-upload">
+                        <label class="upload-label">Project name</label>
+                        <input type="text" class="form-control" value="Entrance Test">
+                    </div>
+
+                    <div class="form-upload">
+                        <label class="upload-label">Experience (in months)</label>
+                        <select class="form-select">
+                            <option selected>14</option>
+                        </select>
+                    </div>
+
+                    <div class="form-upload">
+                        <label class="upload-label">Experience Certificate</label>
+                        <div class="file-container-experience">
+                            <div class="choose-file-box">
+                                <img src="./image/file-Icon.png" alt="" class="me-2">
+                                Choose file
+                                <input type="file">
+                            </div>
+                            <div class="file-desc">
+                                Max file size: 2 MB<br>
+                                File type: doc, docx, pdf
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline-dark w-100 mb-3">Add more</button>
+
+                <div class="d-flex justify-content-between mt-3">
+                    <button type="button" class="btn btn-outline-secondary">Go back</button>
+                    <button type="submit" class="btn btn-primary next-btn">Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- ********************************* Professional Experience section end ******************** -->
+
+
+    <!-- ********************************* Bank details section start ****************************** -->
+    <div class="bank-details-section info-box">
+        <div class="upload-box">
+            <h5>Step 6: Bank details</h5>
+            <form>
+                <div class="form-upload">
+                    <label class="upload-label">Beneficiary Name*</label>
+                    <input type="text" class="form-control" value="HDFC Bank">
+                </div>
+                <div class="form-upload">
+                    <label class="upload-label">Bank Name*</label>
+                    <input type="text" class="form-control" value="HDFC Bank">
+                </div>
+                <div class="form-upload">
+                    <label class="upload-label">Account Number*</label>
+                    <input type="text" class="form-control" value="1100 2234 4465 5593">
+                </div>
+                <div class="form-upload">
+                    <label class="upload-label">IFSC Code*</label>
+                    <input type="text" class="form-control" value="HDFCAA0046">
+                </div>
+                <div class="form-upload">
+                    <label class="upload-label">Canceled Check/Passbook*</label>
+                    <div class="file-container">
+                        <div class="choose-file-box">
+                            <img src="./image/file-Icon.png" alt="" class="me-2">
+                            Choose file
+                            <input type="file">
+                        </div>
+                        <div class="file-desc">
+                            Max file size: 2 MB<br>
+                            File type: doc, docx, pdf
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-outline-secondary">Go back</button>
+                    <button type="submit" class="btn btn-primary next-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- *************************************** Bank details section end ******************************** -->
+
+
+    <!-- ********************************** Registration successful section start *********************** -->
+    <div class="Registration-successful-section info-box">
+        <div class="card card-custom text-left">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">Registration Successful</h5>
+                <p class="text-muted"><span class="status-icon">⏳</span> Please wait for 24 hours</p>
+
+                <ul class="text-start mt-4 mb-4" style="font-size: 0.95rem;">
+                    <li class="mb-2">
+                        We have received your registration. Please wait for 24 hours for us to review your request. Our
+                        Team
+                        will be in touch.
+                    </li>
+                    <li>
+                        Please keep your password handy so you can log in when your request is approved.
+                    </li>
+                </ul>
+
+                <a href="#" class="btn btn-custom w-100 next-btn">Back to log in</a>
+            </div>
+        </div>
+    </div>
+    <!-- ********************************** Registration successful section end  *********************** -->
+
+
+    <!-- ************************************ Login section start ************************************* -->
+    <div class="login-section info-box">
+        <div class="login-container d-flex">
+            <div class="left-image"></div>
+            <div class="right-form">
+                <h3>Log in to your Account</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="abcd@gmail.com">
+                    </div>
+                    <!-- Password Field -->
+                    <div class="mb-3 position-relative">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control pr-5" id="password" placeholder="Enter password">
+                        <i class="bi bi-eye position-absolute" id="togglePasswordIcon"
+                            onclick="togglePassword('password', 'togglePasswordIcon')"
+                            style="top: 38px; right: 15px; cursor: pointer;"></i>
+                    </div>
+
+                    <div class="mb-3 text-end">
+                        <a href="#" class="text-decoration-none">Forgot Password?</a>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary w-100 next-btn">Log in</button>
+
+                    <div class="mt-3">
+                        Already have an account? <a href="#" class="login-link">Sign up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ************************************ Login section end ************************************* -->
+
+
+
+    <!-- *********************************** footer section start ***************************** -->
+    <footer class="footer">
         <div>@Testpan India 2023 | All rights reserved</div>
         <div><a href="#">Privacy Policy</a> | <a href="#">Help</a></div>
     </footer>
+    <!-- ********************************** footer section end *********************************** -->
 
     <script src="./js/script.js"></script>
 </body>

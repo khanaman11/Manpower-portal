@@ -1,88 +1,771 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f2f2f2;
-    }
+.info-box {
+    display:none !important;
+}
 
+.info-box.active {
+    display: block !important;
+}
+
+/* **************************** signup section start ******************************* */
+.signup-container{
+    max-width: 880px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-image {
+    flex: 1;
+    background-image: url('../image/img-login.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.right-form {
+    flex: 1;
+    padding: 40px;
+}
+
+.right-form h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-check-label {
+    font-size: 13px;
+}
+
+.form-check-label a,
+.login-link {
+    text-decoration: none;
+    color: #0d6efd;
+}
+
+.login-link:hover,
+.form-check-label a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px) {
     .signup-container {
-      max-width: 880px;
-      margin: 60px auto;
-      display: flex;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
     }
 
     .left-image {
-      flex: 1;
-      background-image: url('../image/img-login.png');
-      background-size: cover;
-      background-position: center;
-      min-height: 500px;
-    }
-
-    .right-form {
-      flex: 1;
-      padding: 40px;
-    }
-
-    .right-form h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
-
-    .form-control {
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    .input-group .btn {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    .form-check-label {
-      font-size: 13px;
-    }
-
-    .form-check-label a,
-    .login-link {
-      text-decoration: none;
-      color: #0d6efd;
-    }
-
-    .login-link:hover,
-    .form-check-label a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      font-size: 13px;
-      color: #888;
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    footer a {
-      color: #0d6efd;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .signup-container {
-        flex-direction: column;
-      }
-
-      .left-image {
         min-height: 250px;
-      }
     }
-  
+}
+
+/* ************************************** signup section end **************************** */
+
+
+/* ******************************* Email verify section start ************************************** */
+.Email-verify-section{
+    max-width: 440px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.verify-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 440px;
+    width: 100%;
+
+}
+
+.verify-box h4 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.verify-box p {
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+}
+
+.verify-box .otp-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.otp-inputs input {
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.verify-box .resend {
+    font-size: 13px;
+    color: #555;
+    text-align: right;
+}
+
+.verify-box .resend a {
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.verify-box .resend a:hover {
+    text-decoration: underline;
+}
+
+.btn-primary {
+    background-color: #1664c0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+}
+
+/* ******************************* Email verify section end ************************************** */
+
+
+/* *************************** Basic details section start ************************************** */
+.basic-details-section {
+    max-width: 440px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.details-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 440px;
+    width: 100%;
+}
+
+.details-box h5 {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: #1664c0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* ******************************** Basic details section end **************************** */
+
+
+/* ******************************* Location-details-section start ************************** */
+.location-details-section {
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.location-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+}
+
+.location-box h5 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-control {
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #256FA7 !important;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+    width: 300px;
+    margin: 0;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 10px 30px;
+    width: 100px;
+    margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+    .row>div {
+        margin-bottom: 20px;
+    }
+}
+
+/* ********************************** Location-details-section end *************************** */
+
+
+/* ********************************** Upload Government-section start *************************** */
+.upload-goverment-section {
+    max-width: 460px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.upload-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 460px !important;
+    width: 100%;
+}
+
+.upload-box h5 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-upload {
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.file-container {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.choose-file-box {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+}
+
+.choose-file-box i {
+    margin-right: 8px;
+}
+
+.choose-file-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-desc {
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #6c757d;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    background-color: #1664c0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+/* ********************************** Upload Government-section end *************************** */
+
+/* ********************************** Education details section start ************************* */
+.education-details-section {
+    max-width: 440px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.upload-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 440px;
+    width: 100%;
+}
+
+.upload-box h5 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-upload {
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px 12px;
+}
+
+.file-container {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.choose-file-box {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.choose-file-box::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.choose-file-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-desc {
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #6c757d;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    background-color: #1664c0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+/* ********************************** Education details section start ************************* */
+
+/* ******************************** Professional-Experience-section-start ********************* */
+.Professional-Experience-section {
+    max-width: 440px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.upload-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 440px;
+    width: 100%;
+}
+
+.upload-box h5 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-upload {
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px 12px;
+}
+
+.file-container-experience {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.choose-file-box {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.choose-file-box::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.choose-file-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-desc {
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #6c757d;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    background-color: #1664c0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.experience-block {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* ******************************** Professional-Experience-section-end ********************* */
+
+
+
+/* ******************************* Bank details section start *********************************** */
+.bank-details-section {
+   max-width: 440px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.upload-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 440px;
+    width: 100%;
+}
+
+.upload-box h5 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.form-upload {
+    margin-bottom: 20px;
+}
+
+.upload-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+    font-size: 14px;
+    padding: 10px 12px;
+}
+
+.file-container {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.choose-file-box {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    position: relative;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.choose-file-box::before {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.choose-file-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-desc {
+    border-left: 1px solid #ddd;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #6c757d;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    background-color: #1664c0;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 10px 30px;
+}
+
+/* **************************************  Bank details section end ******************************  */
+
+/* ******************************** Registration successful section start ********************  */
+.card-custom {
+    max-width: 440px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px !important;
+}
+
+.status-icon {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.btn-custom {
+    background-color: #1565c0 !important;
+    color: white !important;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+.btn-custom:hover {
+    background-color: #0d47a1;
+}
+
+/* ******************************** Registration successful section start ********************  */
+
+
+/* ******************************* Login section start ************************************ */
+.login-section{
+    max-width: 800px;
+    margin: 30px auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.login-section .left-image{
+    flex: 1;
+    background-image: url("../image/login-img2.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+/* ******************************** Login section end *************************************** */
+
+
+/****************************************  footer section start ***************************************/
+footer {
+    font-size: 13px;
+    color: #888;
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+}
+
+footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/****************************************  footer section end ***************************************/

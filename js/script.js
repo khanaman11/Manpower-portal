@@ -1,5 +1,50 @@
 
-    function togglePassword(id) {
-      const input = document.getElementById(id);
-      input.type = input.type === 'password' ? 'text' : 'password';
+function togglePassword(id) {
+    const input = document.getElementById(id);
+    input.type = input.type === 'password' ? 'text' : 'password';
+}
+
+
+// ************* password icon show and hode . ************************//
+function togglePassword(inputId, iconId) {
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("bi-eye");
+        icon.classList.add("bi-eye-slash");
+    } else {
+        input.type = "password";
+        icon.classList.remove("bi-eye-slash");
+        icon.classList.add("bi-eye");
     }
+}
+
+
+
+// ****************************** Box show and hide js ******************************** //
+const nextButtons = document.querySelectorAll('.next-btn');
+
+nextButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        // Prevent form submit if button is inside <form>
+        e.preventDefault();
+
+        const currentBox = btn.closest('.info-box'); // find current visible section
+        const nextBox = currentBox.nextElementSibling;
+
+        // Hide current
+        currentBox.classList.remove('active');
+
+        // Show next (if it's a box)
+        if (nextBox && nextBox.classList.contains('info-box')) {
+            nextBox.classList.add('active');
+        } else {
+            console.log("No more steps.");
+        }
+    });
+});
+
+
+
