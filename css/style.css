@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Karla", sans-serif;
-    
 
 }
 
@@ -781,6 +780,41 @@
     background-size: cover;
     background-position: center;
     min-height: 400px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .left-image {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  .right-form {
+    padding: 30px 20px;
+  }
+
+  .right-form h3 {
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .right-form {
+    padding: 20px 15px;
+  }
+
+  .right-form h3 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
 }
 
 /* ******************************** Login section end *************************************** */
