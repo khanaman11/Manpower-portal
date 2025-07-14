@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 
 </head>
 
 <body>
     <!-- ***************************** logo section start ******************* -->
-    <div class="logo text-left pt-4 ps-4 position-sticky top-0 bg-white">
+    <div class="logo text-left pt-4 ps-4 position-sticky top-0 bg-white Zindex">
         <img src="./image/logo.png" alt="Testpan Logo">
     </div>
     <!-- ***************************** Logo section end ******************** -->
@@ -52,7 +54,7 @@
 
 
                     <div class="form-check mb-3">
-                        <input class="form-check-input input-bg" type="checkbox" id="agree">
+                        <input class="form-check-input" type="checkbox" id="agree">
                         <label class="form-check-label" for="agree">
                             I agree to the <a href="#">Terms & Service</a> & <a href="#">Privacy Policy</a>
                         </label>
@@ -496,13 +498,14 @@
                     </div>
                     <!-- Password Field -->
                     <div class="mb-3 position-relative">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control pr-5 input-bg" id="password"
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control pr-5 input-bg" id="loginPassword"
                             placeholder="Enter password">
-                        <i class="bi bi-eye position-absolute" id="togglePasswordIcon"
-                            onclick="togglePassword('password', 'togglePasswordIcon')"
+                        <i class="bi bi-eye position-absolute" id="toggleLoginPassword"
+                            onclick="togglePassword('loginPassword', 'toggleLoginPassword')"
                             style="top: 38px; right: 15px; cursor: pointer;"></i>
                     </div>
+
 
                     <div class="mb-3 text-end">
                         <a href="#" class="text-decoration-none">Forgot Password?</a>
@@ -525,7 +528,7 @@
     <div class="login-email-verify-section info-box">
         <div class="email-verify-box text-center">
             <h4>Verify your Email</h4>
-            <input type="email" class="email-input mb-3" value="abcd@gmail.com" readonly>
+            <input type="email" class="email-input mb-3" value="abcd@gmail.com" required>
             <button class="btn btn-proceed w-100 next-btn">Proceed</button>
         </div>
     </div>
@@ -561,24 +564,25 @@
             <h4>Enter new Password</h4>
             <p>Enter the 6 digit code sent to <strong>abcd@gmail.com</strong>.</p>
 
-            <div class="mb-3 form-group">
+            <!-- ✅ New Password Field -->
+            <div class="mb-3 form-group position-relative">
                 <label>New Password</label>
                 <input type="password" class="form-control input-bg" id="newPassword">
-                <i class="bi bi-eye toggle-password" onclick="togglePassword('newPassword', this)"></i>
+                <i class="bi bi-eye position-absolute" onclick="togglePassword('newPassword', this)"
+                    style="top: 38px; right: 15px; cursor: pointer;"></i>
             </div>
 
-            <div class="mb-4 form-group">
-                <label>Confirm Password</label>
-                <input type="password" class="form-control input-bg" id="confirmPassword">
-                <i class="bi bi-eye toggle-password" onclick="togglePassword('confirmPassword', this)"></i>
+            <!-- ✅ Confirm Password Field -->
+            <div class="mb-4 form-group position-relative">
+                <label for="resetConfirmPassword">Confirm Password</label>
+                <input type="password" class="form-control input-bg" id="resetConfirmPassword" autocomplete="off">
+                <i class="bi bi-eye position-absolute" onclick="togglePassword('resetConfirmPassword', this)"
+                    style="top: 38px; right: 15px; cursor: pointer;"></i>
             </div>
-
             <button class="btn btn-confirm w-100">Confirm</button>
         </div>
     </div>
     <!-- ********************************** Enter new password section end ************************** -->
-
-
 
     <!-- *********************************** footer section start ***************************** -->
     <footer class="footer">
