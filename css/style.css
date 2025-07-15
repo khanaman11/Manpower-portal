@@ -946,6 +946,11 @@
     color: #888;
     font-size: 18px;
 }
+.eye-icon{
+    position: absolute !important;
+    top: 32px !important;
+
+}
 
 .btn-confirm {
     background-color: #2072b3 !important;

@@ -117,23 +117,22 @@ function showLoginBox() {
 
 
 // ************************* GO Back Page script start ******************************* // 
-function goBack(){
+function goBack() {
     let backToPage = document.getElementById("backToPage");
     let basicDetails = document.getElementById("basicDetails");
     backToPage.classList.remove("active");
     basicDetails.classList.add('active')
 }
 
-function goBack1(){
+function goBack1() {
     let uploadGoverment = document.getElementById("uploadGoverment");
     let backToPage = document.getElementById("backToPage");
-    
     uploadGoverment.classList.remove("active");
     backToPage.classList.add("active")
 }
 
 
-function goBack2(){
+function goBack2() {
     let uploadGoverment = document.getElementById("uploadGoverment");
     let educationPage = document.getElementById("educationPage")
     educationPage.classList.remove("active")
@@ -141,21 +140,23 @@ function goBack2(){
 }
 
 
-function goBack3(){
+function goBack3() {
     let educationPage = document.getElementById("educationPage")
     let ProfessionalExprience = document.getElementById("ProfessionalExprience");
     ProfessionalExprience.classList.remove("active")
     educationPage.classList.add("active")
-    
+
 }
 
-function goBack4(){
+function goBack4() {
     let bankDetails = document.getElementById("bankDetails");
     let ProfessionalExprience = document.getElementById("ProfessionalExprience");
     bankDetails.classList.remove("active");
     ProfessionalExprience.classList.add("active")
 
 }
+
+
 
 // ************************* GO Back Page script end ******************************* // 
 
