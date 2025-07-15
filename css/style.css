@@ -20,7 +20,11 @@
     display: block !important;
 }
 
-/* **************************** signup section start ******************************* */
+ .bookmytest-logo{
+    width: 90px;
+    height: 90px;
+ }
+
 .signup-container {
     max-width: 880px;
     margin: 10px auto;
