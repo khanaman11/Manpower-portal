@@ -35,13 +35,14 @@ body {
 
 .signup-container {
     max-width: 880px;
-    margin: 10px auto;
+    margin:auto;
     display: flex;
     background-color: white;
     border-radius: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
     border: 1px solid #E2E2E2;
+    /* height: 435px; */
 }
 
 .left-image {
@@ -985,12 +986,13 @@ body {
 footer {
     font-size: 13px;
     color: #888;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px;
+    padding: 10px;
+   
 }
 
 footer a {
