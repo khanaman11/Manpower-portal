@@ -6,6 +6,11 @@
     box-sizing: border-box;
     font-family: "Karla", sans-serif;
 
+
+}
+
+body {
+    background-color: #f6f6f6 !important;
 }
 
 .Zindex {
@@ -20,17 +25,20 @@
     display: block !important;
 }
 
- .bookmytest-logo{
-    width: 90px;
-    height: 90px;
- }
+.bookmytest-logo {
+    width: 60px;
+    height: 60px;
+}
+.header{
+    background-color: #f6f6f6;
+}
 
 .signup-container {
     max-width: 880px;
     margin: 10px auto;
     display: flex;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
     border: 1px solid #E2E2E2;
@@ -57,7 +65,7 @@
 }
 
 .form-control {
-    border-radius: 8px;
+    border-radius: 10px !important;
     font-size: 14px;
 }
 
@@ -950,7 +958,8 @@
     color: #888;
     font-size: 18px;
 }
-.eye-icon{
+
+.eye-icon {
     position: absolute !important;
     top: 32px !important;
 
