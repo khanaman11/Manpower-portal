@@ -43,6 +43,11 @@ a {
     font-weight: 600;
 }
 
+.dashbord-btn{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
 .back-btn {
     border-radius: 10px;
     border: 1px solid #A0BDD3;
