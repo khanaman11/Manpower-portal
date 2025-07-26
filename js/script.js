@@ -159,11 +159,7 @@ function goBack6() {
     bankDetails.classList.remove("active");
     JobPreferences.classList.add('active')
 }
-
-
-
 // ************************* GO Back Page script end ******************************* // 
-
 
 // ************************ Dashbord pop-up script start********************************* //
 document.getElementById("acceptBtn").addEventListener("click", function () {
@@ -184,7 +180,7 @@ document.getElementById("acceptBtn").addEventListener("click", function () {
 
 // **************************** table pagination script start ***************************** //
 const rows = document.querySelectorAll("#myTable tbody tr");
-const rowsPerPage = 5;
+const rowsPerPage = 8;
 let currentPage = 1;
 const totalPages = Math.ceil(rows.length / rowsPerPage);
 const pageInfo = document.getElementById("pageInfo");
@@ -221,8 +217,6 @@ nextBtn.onclick = () => {
 // Show first page on load
 displayPage(currentPage);
 // **************************** table pagination script end ******************************* //
-
-
 
 
 

@@ -247,7 +247,7 @@ a {
 
 .details-box h5 {
     font-weight: 700;
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     font-style: bold;
     font-size: 25px;
 }
@@ -348,7 +348,7 @@ a {
 }
 
 .location-address-info .Permanent-add {
-    margin-right: 30%;
+    margin-right: 30% !important;
 }
 
 .form-label {
@@ -1380,15 +1380,10 @@ tr span {
 
 
 /* ********************************** scrolling code start ********************************** */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-}
+
 
 .container-fluid {
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -1398,18 +1393,17 @@ body {
     left: 0;
     top: 0;
     background-color: white;
-    /* Optional: white background */
     z-index: 1;
     width: 16.6667%;
-    /* Bootstrap col-2 is ~16.67% */
 }
 
 .col-10 {
     margin-left: 16.6667%;
-    /* To shift right column after fixed aside */
     height: 100vh;
     overflow-y: auto;
+    padding: 1rem; /* Optional: for better spacing */
 }
+ 
 
 /* ********************************** scrolling code end********************************** */
 
