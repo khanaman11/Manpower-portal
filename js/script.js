@@ -117,48 +117,111 @@ function showLoginBox() {
 
 
 // ************************* GO Back Page script start ******************************* // 
-function goBack() {
-    let backToPage = document.getElementById("backToPage");
+function goBack1() {
+    let locationDetails = document.getElementById("locationDetails");
     let basicDetails = document.getElementById("basicDetails");
-    backToPage.classList.remove("active");
+    locationDetails.classList.remove("active");
     basicDetails.classList.add('active')
 }
 
-function goBack1() {
-    let uploadGoverment = document.getElementById("uploadGoverment");
-    let backToPage = document.getElementById("backToPage");
-    uploadGoverment.classList.remove("active");
-    backToPage.classList.add("active")
-}
-
-
 function goBack2() {
     let uploadGoverment = document.getElementById("uploadGoverment");
-    let educationPage = document.getElementById("educationPage")
-    educationPage.classList.remove("active")
-    uploadGoverment.classList.add("active");
+    let locationDetails = document.getElementById("locationDetails");
+    uploadGoverment.classList.remove("active");
+    locationDetails.classList.add('active')
 }
 
 
 function goBack3() {
-    let educationPage = document.getElementById("educationPage")
-    let ProfessionalExprience = document.getElementById("ProfessionalExprience");
-    ProfessionalExprience.classList.remove("active")
-    educationPage.classList.add("active")
-
+    let educationDetails = document.getElementById("educationDetails");
+    let uploadGoverment = document.getElementById("uploadGoverment");
+    educationDetails.classList.remove("active");
+    uploadGoverment.classList.add('active')
 }
 
 function goBack4() {
-    let bankDetails = document.getElementById("bankDetails");
+    let educationDetails = document.getElementById("educationDetails");
     let ProfessionalExprience = document.getElementById("ProfessionalExprience");
-    bankDetails.classList.remove("active");
-    ProfessionalExprience.classList.add("active")
+    educationDetails.classList.add("active");
+    ProfessionalExprience.classList.remove('active')
+}
 
+function goBack5() {
+    let JobPreferences = document.getElementById("JobPreferences");
+    let ProfessionalExprience = document.getElementById("ProfessionalExprience");
+    JobPreferences.classList.remove("active");
+    ProfessionalExprience.classList.add('active')
+}
+
+function goBack6() {
+    let JobPreferences = document.getElementById("JobPreferences");
+    let bankDetails = document.getElementById("bankDetails");
+    bankDetails.classList.remove("active");
+    JobPreferences.classList.add('active')
 }
 
 
 
 // ************************* GO Back Page script end ******************************* // 
+
+
+// ************************ Dashbord pop-up script start********************************* //
+document.getElementById("acceptBtn").addEventListener("click", function () {
+    // Hide first offcanvas
+    const firstOffcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('centerPopup'));
+    if (firstOffcanvas) {
+        firstOffcanvas.hide();
+    }
+
+    // Wait a bit to open second, so transition looks smooth
+    setTimeout(() => {
+        const secondOffcanvas = new bootstrap.Offcanvas(document.getElementById('centerPopupAccept'));
+        secondOffcanvas.show();
+    }, 500); // 0.5 second delay
+});
+// ************************ Dashbord pop-up script end *********************************** //
+
+
+// **************************** table pagination script start ***************************** //
+const rows = document.querySelectorAll("#myTable tbody tr");
+const rowsPerPage = 5;
+let currentPage = 1;
+const totalPages = Math.ceil(rows.length / rowsPerPage);
+const pageInfo = document.getElementById("pageInfo");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+
+function displayPage(page) {
+    rows.forEach((row, i) => {
+        row.style.display = (i >= (page - 1) * rowsPerPage && i < page * rowsPerPage) ? "" : "none";
+    });
+
+    pageInfo.textContent = `Page ${page} of ${totalPages}`;
+
+    // Disable or enable buttons based on page
+    prevBtn.disabled = (page === 1);
+    nextBtn.disabled = (page === totalPages);
+}
+
+// Event listeners
+prevBtn.onclick = () => {
+    if (currentPage > 1) {
+        currentPage--;
+        displayPage(currentPage);
+    }
+};
+
+nextBtn.onclick = () => {
+    if (currentPage < totalPages) {
+        currentPage++;
+        displayPage(currentPage);
+    }
+};
+
+// Show first page on load
+displayPage(currentPage);
+// **************************** table pagination script end ******************************* //
+
 
 
 

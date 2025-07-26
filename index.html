@@ -100,6 +100,15 @@
     <div class="basic-details-section info-box" id="basicDetails">
         <div class="details-box">
             <h5>Step 1: Basic details</h5>
+            <div class="profile-cnt py-4">
+                <div class="profile-wrapper">
+                    <img src="./image/profile.png" alt="Profile" class="profile-image" />
+                    <div>
+                        <button class="btn upload-btn" type="file">Upload</button>
+                        <div class="note">We support PNGs, JPEGs under 2 mb</div>
+                    </div>
+                </div>
+            </div>
             <form>
                 <div class="mb-3">
                     <label for="fullName" class="form-label">Full name<span class="mendatry">*</span></label>
@@ -133,7 +142,7 @@
 
 
     <!-- ****************************** Location details section start ************************ -->
-    <div class="location-details-section info-box" id="backToPage">
+    <div class="location-details-section info-box" id="locationDetails">
         <div class="location-box">
             <h5>Step 2: Location details</h5>
             <form>
@@ -174,7 +183,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end mt-4">
-                    <button type="button" class="back-btn" onclick="goBack()">Go back</button>
+                    <button type="button" class="back-btn" onclick="goBack1()">Go back</button>
                     <button type="submit" class="btn btn-primary next-btn">Next</button>
                 </div>
             </form>
@@ -265,7 +274,7 @@
                 </div>
 
                 <div class="d-flex justify-content-end mt-4">
-                    <button type="button" class="back-btn" onclick="goBack1()">Go back</button>
+                    <button type="button" class="back-btn" onclick="goBack2()">Go back</button>
                     <button type="submit" class="btn btn-primary next-btn">Next</button>
                 </div>
             </form>
@@ -275,7 +284,7 @@
 
 
     <!-- ********************************* Education details section start ***************************** -->
-    <div class="education-details-section info-box" id="educationPage">
+    <div class="education-details-section info-box" id="educationDetails">
         <div class="upload-box">
             <h5>Step 4: Education details</h5>
             <form>
@@ -333,7 +342,7 @@
                 </div>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <button type="button" class="back-btn" onclick="goBack2()">Go back</button>
+                    <button type="button" class="back-btn" onclick="goBack3()">Go back</button>
                     <button type="submit" class="btn btn-primary next-btn">Next</button>
                 </div>
             </form>
@@ -408,7 +417,7 @@
                 <button type="button" class="btn btn-outline-dark w-100 mb-3">Add more</button>
 
                 <div class="d-flex justify-content-between mt-3">
-                    <button type="button" class="back-btn" onclick="goBack3()">Go back</button>
+                    <button type="button" class="back-btn" onclick="goBack4()">Go back</button>
                     <button type="submit" class="btn btn-primary next-btn">Next</button>
                 </div>
             </form>
@@ -417,10 +426,44 @@
     <!-- ********************************* Professional Experience section end ******************** -->
 
 
+    <!-- ********************************** Job Preferences start *********************************** -->
+    <div class="Job-Preferences-section info-box" id="JobPreferences">
+        <div class="card card-custom">
+            <h5 class="fw-semibold mb-3">Step 6: Job Preferences</h5>
+
+            <div class="mb-3">
+                <label class="form-label">What jobs are you comfortable with?</label>
+                <select class="form-select">
+                    <option selected>Invigilator, Online Proctor</option>
+                    <option>Examiner</option>
+                    <option>Coordinator</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">What are your travel preferences?</label>
+                <select class="form-select">
+                    <option selected>Local, Suburban, Outstation</option>
+                    <option>Local Only</option>
+                    <option>Suburban</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button class="back-btn" onclick="goBack5()">Go back</button>
+                <button type="submit" class="btn btn-primary next-btn">Next</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ********************************** Job Preferences end ************************************* -->
+
+
     <!-- ********************************* Bank details section start ****************************** -->
     <div class="bank-details-section info-box" id="bankDetails">
         <div class="upload-box">
-            <h5>Step 6: Bank details</h5>
+            <h5>Step : Bank details</h5>
             <form>
                 <div class="form-upload">
                     <label class="upload-label">Beneficiary Name<span class="mendatry">*</span></label>
@@ -453,7 +496,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-between mt-4">
-                    <button type="button" class="back-btn" onclick="goBack4()">Go back</button>
+                    <button type="button" class="back-btn" onclick="goBack6()">Go back</button>
                     <a href="./dashbord.html" class="btn btn-primary dashbord-btn">Submit</a>
                 </div>
             </form>
