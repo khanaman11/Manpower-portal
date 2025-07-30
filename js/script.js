@@ -278,6 +278,13 @@ window.addEventListener("DOMContentLoaded", updatePagination);
 // **************************** table pagination script end ******************************* //
 
 
+// **************************** humburger
+function toggleSidebar() {
+    const sidebar = document.querySelector('.aside-cnt');
+    sidebar.classList.toggle('show');
+}
+
+
 
 
 
