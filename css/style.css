@@ -1445,3 +1445,18 @@ tr span {
 
 /* ********************************** scrolling code end********************************** */
 
+
+
+/* ********************************* Responsive style for mobile device ********************* */
+
+@media(max-width:576px) {
+    .Testpan-logo{
+        width: 60px;
+        height: 60px;
+    }
+    .bookmytest-logo{
+        width: 60px;
+        height: 60px;
+    }
+}
+
