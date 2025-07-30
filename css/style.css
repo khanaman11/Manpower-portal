@@ -1164,15 +1164,16 @@ footer a:hover {
 
 .aside ul li a {
     text-decoration: none !important;
-    padding: 10px 0px;
+    padding: 10px 20px;
     display: inline-block;
+    color: #737373 !important;
     width: 100%;
 }
 
 .aside ul li a.active {
     background-color: #155a90;
     color: #fff !important;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     border-radius: 10px;
     margin: 10px 0px;
 }
@@ -1237,15 +1238,19 @@ footer a:hover {
 .tab-cnt a {
     color: #737373 !important;
     text-decoration: none !important;
+    padding: 10px 0px;
 }
 
-.tab-cnt a.active {
+.tab1.active,
+.tab2.active,
+.tab3.active {
     border-bottom: 2px solid #000;
     color: #000 !important;
 }
 
+
 .table-cnt {
-    padding: 20px 0px;
+    /* padding: 10px 0px; */
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #ddd;
@@ -1301,58 +1306,36 @@ tr span {
     border-radius: 10px;
 }
 
-/* 🔽 Mobile Responsive CSS */
-@media (max-width: 768px) {
-    .search-box {
-        width: 100%;
-        padding: 10px 15px;
-    }
+.table-wrapper {
+    display: none;
+}
 
-    .input-import-cnt {
-        flex-direction: column;
-        align-items: stretch;
-    }
+.table-wrapper.active {
+    display: block;
+}
 
-    .tab-cnt {
-        flex-direction: column;
-        gap: 10px !important;
-    }
+.tab1.active,
+.tab2.active,
+.tab3.active {
+    border-bottom: 2px solid #000;
+    color: #000 !important;
+}
 
-    .table-cnt {
-        margin: 0px 10px;
-        padding: 10px 0px;
-    }
+.pagination-button {
+  background-color: white;      /* Default background when enabled */
+  color: black;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-    table th,
-    table td {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .table-btn-cnt {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .nav-cnt h2 {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    .import-box a {
-        display: block;
-        text-align: center;
-    }
-
-    .aside-cnt {
-        height: auto;
-        position: relative;
-    }
-
-    .logout-cnt {
-        position: relative;
-        margin-top: 20px;
-    }
+/* When button is disabled */
+.pagination-button:disabled {
+  background-color: #e0e0e0;    /* Light gray */
+  color: #888888;               /* Faded text */
+  cursor: not-allowed;
 }
 
 /* ************************************* Dashbord style end ********************************** */
@@ -1462,10 +1445,3 @@ tr span {
 
 /* ********************************** scrolling code end********************************** */
 
-/* button disable / enable style start*/
-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-/* button disable / enable style end*/

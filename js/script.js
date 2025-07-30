@@ -178,45 +178,107 @@ document.getElementById("acceptBtn").addEventListener("click", function () {
 // ************************ Dashbord pop-up script end *********************************** //
 
 
-// **************************** table pagination script start ***************************** //
-const rows = document.querySelectorAll("#myTable tbody tr");
-const rowsPerPage = 8;
-let currentPage = 1;
-const totalPages = Math.ceil(rows.length / rowsPerPage);
-const pageInfo = document.getElementById("pageInfo");
-const prevBtn = document.getElementById("prev");
-const nextBtn = document.getElementById("next");
+// *************************** table tab script start *************************************//
+let alltable = document.querySelector("#all-table");
+let confirmtable = document.querySelector("#confirm-table");
+let pasttable = document.querySelector("#past-table");
 
-function displayPage(page) {
-    rows.forEach((row, i) => {
-        row.style.display = (i >= (page - 1) * rowsPerPage && i < page * rowsPerPage) ? "" : "none";
-    });
+let allBtn = document.querySelector("#allBtn");
+let confirmBtn = document.querySelector("#confirmBtn");
+let pastBtn = document.querySelector("#pastBtn");
 
-    pageInfo.textContent = `Page ${page} of ${totalPages}`;
+let tabs = [allBtn, confirmBtn, pastBtn];
+let tables = [alltable, confirmtable, pasttable];
 
-    // Disable or enable buttons based on page
-    prevBtn.disabled = (page === 1);
-    nextBtn.disabled = (page === totalPages);
+allBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    switchTab(0);
+});
+
+confirmBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    switchTab(1);
+});
+
+pastBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    switchTab(2);
+});
+
+function switchTab(index) {
+    // Remove active from all tabs and tables
+    tabs.forEach(tab => tab.classList.remove("active"));
+    tables.forEach(table => table.classList.remove("active"));
+
+    // Add active to selected tab and table
+    tabs[index].classList.add("active");
+    tables[index].classList.add("active");
 }
 
-// Event listeners
-prevBtn.onclick = () => {
+// *************************** table tab script end *************************************//
+
+
+
+// **************************** table pagination script start ***************************** //
+
+const rowsPerPage = 10;
+let currentPage = 1;
+
+const updatePagination = () => {
+    document.querySelectorAll('.paginated').forEach(table => {
+        const rows = table.querySelectorAll("tbody tr");
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+
+        // Hide all rows
+        rows.forEach(row => row.style.display = 'none');
+
+        // Show only the rows for current page
+        const start = (currentPage - 1) * rowsPerPage;
+        const end = start + rowsPerPage;
+
+        for (let i = start; i < end && i < rows.length; i++) {
+            rows[i].style.display = '';
+        }
+
+        // Update page info
+        const pageInfo = document.getElementById("pageInfo");
+        if (pageInfo) {
+            pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+        }
+
+        // Disable Prev/Next buttons
+        document.getElementById("prev").disabled = currentPage === 1;
+        document.getElementById("next").disabled = currentPage === totalPages;
+    });
+};
+
+document.getElementById("prev").addEventListener("click", () => {
     if (currentPage > 1) {
         currentPage--;
-        displayPage(currentPage);
+        updatePagination();
     }
-};
+});
 
-nextBtn.onclick = () => {
-    if (currentPage < totalPages) {
-        currentPage++;
-        displayPage(currentPage);
-    }
-};
+document.getElementById("next").addEventListener("click", () => {
+    document.querySelectorAll('.paginated').forEach(table => {
+        const rows = table.querySelectorAll("tbody tr");
+        const totalPages = Math.ceil(rows.length / rowsPerPage);
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePagination();
+        }
+    });
+});
 
-// Show first page on load
-displayPage(currentPage);
+// Initialize pagination
+window.addEventListener("DOMContentLoaded", updatePagination);
+
+
+
 // **************************** table pagination script end ******************************* //
+
+
+
 
 
 

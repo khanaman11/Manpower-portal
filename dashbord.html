@@ -28,17 +28,17 @@
                 </div>
                 <div class="logout-cnt py-3 px-4 ">
 
-                    <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a>
+                    <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Log out</a>
                 </div>
             </div>
             <div class="col-10 p-0 right-cnt">
                 <div class="py-4 px-4 nav-cnt">
                     <h2>My Projects</h2>
                 </div>
-                <div class="tab-cnt pt-3  mx-4">
-                    <a href="#" class="active">All</a>
-                    <a href="#">Confirmed</a>
-                    <a href="#">Past</a>
+                <div class="tab-cnt pt-3 mx-4">
+                    <a href="#" class="tab tab1 active" id="allBtn">All</a>
+                    <a href="#" class="tab tab2" id="confirmBtn">Confirmed</a>
+                    <a href="#" class="tab tab3" id="pastBtn">Past</a>
                 </div>
                 <div class="table-cnt">
                     <div class="input-import-cnt px-4 py-3">
@@ -46,8 +46,9 @@
                                 placeholder="Enter exam name..." class="search-box"></div>
                         <div class="import-box"><a href="#">Export <img src="./image/import.png" alt=""></a></div>
                     </div>
-                    <div class="table-wrapper py-3">
-                        <table id="myTable">
+                    <!-- All table -->
+                    <div class="table-wrapper py-3 active" id="all-table">
+                        <table id="myTable" class="paginated">
                             <thead>
                                 <tr>
                                     <th>Project name</th>
@@ -70,7 +71,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -81,7 +82,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -92,7 +93,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -103,7 +104,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -114,7 +115,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -125,7 +126,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -136,7 +137,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -147,7 +148,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -158,7 +159,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -169,7 +170,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -180,7 +181,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -191,7 +192,7 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
                                 <tr>
                                     <td>Bar Council</td>
@@ -202,16 +203,407 @@
                                     <td>Rs. 1000</td>
                                     <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
                                     <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
-                                            data-bs-target="#centerPopup" aria-controls="centerPopup">view</a></td>
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
                                 </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-wrapper py-3" id="confirm-table">
+                        <table id="myTable1" class="paginated">
+                            <thead>
+                                <tr>
+                                    <th>Project name</th>
+                                    <th>From</th>
+                                    <th>Exam Date</th>
+                                    <th>City</th>
+                                    <th>Duration</th>
+                                    <th>Payout</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> Confirm</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-wrapper py-3" id="past-table">
+                        <table id="myTable2" class="paginated">
+                            <thead>
+                                <tr>
+                                    <th>Project name</th>
+                                    <th>From</th>
+                                    <th>Exam Date</th>
+                                    <th>City</th>
+                                    <th>Duration</th>
+                                    <th>Payout</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt="">past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> past</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Bar Council</td>
+                                    <td>Testpan India</td>
+                                    <td>Jul 19 - Jul 21st, 2025</td>
+                                    <td>Dehradun</td>
+                                    <td>3 days</td>
+                                    <td>Rs. 1000</td>
+                                    <td><span> <img src="./image/inreview-icon.png" alt=""> In review</span></td>
+                                    <td><a href="#" class="view-btn" data-bs-toggle="offcanvas"
+                                            data-bs-target="#centerPopup" aria-controls="centerPopup">View</a></td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div class="table-btn-cnt px-4 py-4">
-                    <button id="prev"><i class="fa-solid fa-arrow-left me-1"></i>Previous</button>
+                    <button id="prev" class="pagination-button "><i class="fa-solid fa-arrow-left me-1 "></i>Previous</button>
                     <button class="bg-white" id="pageInfo">Page 1 of 3</button>
-                    <button id="next">Next <i class="fa-solid fa-arrow-right"></i></button>
+                    <button id="next" class="pagination-button ">Next <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -225,7 +617,7 @@
         </div>
         <div class="offcanvas-body">
             <div class="mb-3 badge-custom">
-                <span class="yellow-circle"><i class="fa-solid fa-arrow-down"></i></span>
+                <span class="yellow-circle me-2"><i class="fa-solid fa-arrow-down"></i></span>
                 <span>Booking received on February 26th, 2025</span>
             </div>
 
@@ -336,11 +728,11 @@
         <div class="offcanvas-body">
             <div class="mb-3 badge-custom">
                 <div class="py-2">
-                    <span class="yellow-circle"><i class="fa-solid fa-arrow-down"></i></span>
+                    <span class="yellow-circle me-2"><i class="fa-solid fa-arrow-down"></i></span>
                     <span>Booking received on February 26th, 2025</span>
                 </div>
                 <div class="py-2">
-                    <span class="green-circle"><i class="fas fa-check"></i></span>
+                    <span class="green-circle me-2"><i class="fas fa-check"></i></span>
                     <span>Booking accepted on February 26th, 2025</span>
                 </div>
             </div>
