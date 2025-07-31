@@ -379,11 +379,7 @@ a {
     margin-right: 16px;
 }
 
-@media (max-width: 768px) {
-    .row>div {
-        margin-bottom: 20px;
-    }
-}
+
 
 /* ********************************** Location-details-section end *************************** */
 
@@ -702,29 +698,7 @@ a {
     margin-bottom: 20px;
 }
 
-/* ✅ MOBILE LAYOUT FIXES */
-@media (max-width: 576px) {
-    .file-container-experience {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        gap: 12px;
-        padding: 10px;
-    }
 
-    .choose-file-box {
-        min-width: 90px;
-        padding: 5px 8px;
-        font-size: 11px;
-    }
-
-    .file-desc {
-        border-left: 1px solid #ddd;
-        padding-left: 10px;
-        font-size: 10px !important;
-        margin-top: 0;
-        line-height: 1.3;
-    }
-}
 
 /* ******************************** Professional-Experience-section-end ********************* */
 
@@ -752,6 +726,7 @@ a {
     border-radius: 8px;
     padding: 8px 35px;
 }
+
 /* ********************************* Job Preferences end ******************************** */
 
 
@@ -935,40 +910,7 @@ a {
     min-height: 400px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .login-container {
-        flex-direction: column;
-    }
 
-    .left-image {
-        width: 100%;
-        min-height: 200px;
-    }
-
-    .right-form {
-        padding: 30px 20px;
-    }
-
-    .right-form h3 {
-        font-size: 22px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .right-form {
-        padding: 20px 15px;
-    }
-
-    .right-form h3 {
-        font-size: 20px;
-    }
-
-    .btn {
-        font-size: 14px;
-    }
-}
 
 /* ******************************** Login section end *************************************** */
 
@@ -1312,20 +1254,23 @@ tr span {
 }
 
 .pagination-button {
-  background-color: white;      /* Default background when enabled */
-  color: black;
-  border: 1px solid #ccc;
-  padding: 8px 16px;
-  margin: 5px;
-  border-radius: 4px;
-  cursor: pointer;
+    background-color: white;
+    /* Default background when enabled */
+    color: black;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* When button is disabled */
 .pagination-button:disabled {
-  background-color: #e0e0e0;    /* Light gray */
-  color: #888888;               /* Faded text */
-  cursor: not-allowed;
+    background-color: #e0e0e0;
+    /* Light gray */
+    color: #888888;
+    /* Faded text */
+    cursor: not-allowed;
 }
 
 /* ************************************* Dashbord style end ********************************** */
@@ -1439,19 +1384,14 @@ tr span {
 
 /* ********************************* Responsive style for mobile device ********************* */
 
-/* *********** Nav-responsive start*/
-/* Default (Desktop) */
-.Testpan-logo,
-.bookmytest-logo {
-    width: 111px;
-    height: auto;
-}
 
-/* Mobile responsive */
+
+/* Mobile responsive  Nav-section start*/
 @media (max-width: 576px) {
     .logo {
         display: flex;
-        flex-direction: row !important; /* Ensure row direction */
+        flex-direction: row !important;
+        /* Ensure row direction */
         justify-content: space-between;
         align-items: center;
         padding: 10px 16px;
@@ -1459,10 +1399,9 @@ tr span {
 
     .Testpan-logo,
     .bookmytest-logo {
-        width: 60px;
+        width: 60px !important;
         height: auto;
     }
 }
 
-/* *********** Nav-responsive end*/
-
+/* Mobile responsive  Nav-section end*/
