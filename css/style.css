@@ -1402,6 +1402,10 @@ tr span {
         width: 60px !important;
         height: auto;
     }
+
+    .back-btn{
+        padding: 10px;
+    }
 }
 
 /* Mobile responsive  Nav-section end*/
