@@ -1404,7 +1404,8 @@ tr span {
     }
 
     .back-btn{
-        padding:7px;
+        padding:10px;
+        min-width: fit-content;
     }
 }
 
