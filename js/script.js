@@ -161,6 +161,53 @@ function goBack6() {
 }
 // ************************* GO Back Page script end ******************************* // 
 
+
+// **************************** Aside script start *********************************//
+let projectTab = document.querySelector(".projectTab");
+let profileTab = document.querySelector(".profileTab");
+let myProject = document.querySelector(".myProject");
+let myprofile = document.querySelector(".myprofile");
+let settingTap = document.querySelector(".settingTap");
+let setting = document.querySelector(".setting");
+console.log(setting)
+
+
+const changePage = () => {
+
+    projectTab.addEventListener("click", () => {
+        projectTab.classList.add("active");
+        settingTap.classList.remove("active");
+        profileTab.classList.remove("active");
+        myprofile.style.display = "none";
+        setting.style.display = "none"
+        myProject.style.display = "block"
+
+    })
+
+    profileTab.addEventListener('click', () => {
+        projectTab.classList.remove("active");
+        profileTab.classList.add("active");
+        myProject.style.display = "none";
+        myprofile.style.display = "block";
+        settingTap.classList.remove("active");
+
+
+    });
+
+    settingTap.addEventListener('click', () => {
+        settingTap.classList.add("active");
+        projectTab.classList.remove("active");
+        profileTab.classList.remove("active");
+        myProject.style.display = "none";
+        myprofile.style.display = "none"
+        setting.style.display = "block"
+
+
+    })
+}
+changePage()
+// **************************** Aside script end *********************************//
+
 // ************************ Dashbord pop-up script start********************************* //
 document.getElementById("acceptBtn").addEventListener("click", function () {
     // Hide first offcanvas
@@ -273,16 +320,16 @@ document.getElementById("next").addEventListener("click", () => {
 // Initialize pagination
 window.addEventListener("DOMContentLoaded", updatePagination);
 
-
-
 // **************************** table pagination script end ******************************* //
 
 
-// **************************** humburger
+// **************************** humburger script start ************************************//
 function toggleSidebar() {
-    const sidebar = document.querySelector('.aside-cnt');
-    sidebar.classList.toggle('show');
+    const sidebar = document.querySelector('.project-sidebar');
+    sidebar.classList.toggle('active');
 }
+// **************************** humburger script end ************************************//
+
 
 
 

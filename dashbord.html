@@ -15,27 +15,30 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <!-- Aside section start -->
             <div class="col-2 border-end p-0 aside-cnt" id="mobileSidebar">
                 <div class="logo py-3 px-4 border-bottom logo-cnt">
                     <img src="./image/logo.png" alt="">
                 </div>
                 <!-- Add this in nav-cnt -->
-                <div class="hamburger d-block d-md-none" onclick="toggleSidebar()">
-                   <i class="fa-solid fa-bars"></i>
-                </div>
                 <div class="aside py-3 px-4">
                     <ul>
-                        <li><a href="#" class="active">My Projects</a></li>
-                        <li><a href="#" class="">My Profile</a></li>
-                        <li><a href="#" class="">Settings</a></li>
+                        <li><a href="#" class="active projectTab">My Projects</a></li>
+                        <li><a href="#" class="profileTab">My Profile</a></li>
+                        <li><a href="#" class="settingTap">Settings</a></li>
                     </ul>
                 </div>
                 <div class="logout-cnt py-3 px-4 ">
-
                     <a href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Log out</a>
                 </div>
             </div>
-            <div class="col-10 p-0 right-cnt">
+            <!-- Aside section end -->
+
+            <!-- myproject-sectin-start -->
+            <div class="col-10 p-0 right-cnt myProject">
+                <div class="hamburger" onclick="toggleSidebar()">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </div>
                 <div class="py-4 px-4 nav-cnt">
                     <h2>My Projects</h2>
                 </div>
@@ -611,6 +614,34 @@
                     <button id="next" class="pagination-button ">Next <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>
+            <!-- myproject-sectin-end -->
+
+            <!-- myprofile-sectin-start -->
+            <div class="col-10 p-0 right-cnt  myprofile">
+                <div class="hamburger" onclick="toggleSidebar()">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </div>
+                <div class="py-4 px-4 nav-cnt">
+                    <h2>My Profile</h2>
+                </div>
+            </div>
+            <!-- myprofile-sectin-end -->
+
+            <!-- setting-sectin-start -->
+            <div class="col-10 p-0 right-cnt  setting">
+                <div class="hamburger" onclick="toggleSidebar()">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                </div>
+                <div class="py-4 px-4 nav-cnt">
+                    <h2>Setting</h2>
+                </div>
+            </div>
+            <!-- setting-sectin-end -->
+
+            
+            
+            <!-- header and table sectin -->
+
         </div>
     </div>
 
