@@ -186,10 +186,12 @@ const changePage = () => {
 
     profileTab.addEventListener('click', () => {
         projectTab.classList.remove("active");
+        settingTap.classList.remove("active");
         profileTab.classList.add("active");
         myProject.style.display = "none";
+        setting.style.display = "none"
         myprofile.style.display = "block";
-        settingTap.classList.remove("active");
+        
 
 
     });
