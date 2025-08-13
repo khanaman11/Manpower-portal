@@ -169,45 +169,43 @@ let myProject = document.querySelector(".myProject");
 let myprofile = document.querySelector(".myprofile");
 let settingTap = document.querySelector(".settingTap");
 let setting = document.querySelector(".setting");
-console.log(setting)
 
+// Default state: show project page only
+projectTab.classList.add("active");
+myProject.style.display = "block";
+myprofile.style.display = "none";
+setting.style.display = "none";
 
 const changePage = () => {
-
     projectTab.addEventListener("click", () => {
         projectTab.classList.add("active");
         settingTap.classList.remove("active");
         profileTab.classList.remove("active");
+        myProject.style.display = "block";
         myprofile.style.display = "none";
-        setting.style.display = "none"
-        myProject.style.display = "block"
-
-    })
+        setting.style.display = "none";
+    });
 
     profileTab.addEventListener('click', () => {
         projectTab.classList.remove("active");
         settingTap.classList.remove("active");
         profileTab.classList.add("active");
-        myProject.style.display = "none";
-        setting.style.display = "none"
         myprofile.style.display = "block";
-        
-
-
+        myProject.style.display = "none";
+        setting.style.display = "none";
     });
 
     settingTap.addEventListener('click', () => {
         settingTap.classList.add("active");
         projectTab.classList.remove("active");
         profileTab.classList.remove("active");
+        setting.style.display = "block";
         myProject.style.display = "none";
-        myprofile.style.display = "none"
-        setting.style.display = "block"
+        myprofile.style.display = "none";
+    });
+};
+changePage();
 
-
-    })
-}
-changePage()
 // **************************** Aside script end *********************************//
 
 // ************************ Dashbord pop-up script start********************************* //
@@ -327,9 +325,11 @@ window.addEventListener("DOMContentLoaded", updatePagination);
 
 // **************************** humburger script start ************************************//
 function toggleSidebar() {
-    const sidebar = document.querySelector('.project-sidebar');
-    sidebar.classList.toggle('active');
+    document.getElementById("mobileSidebar").classList.toggle("active");
+   
 }
+
+
 // **************************** humburger script end ************************************//
 
 

@@ -1082,8 +1082,6 @@ footer a:hover {
 
 .logo-cnt img {
     width: 113px;
-
-
 }
 
 .aside ul {
@@ -1387,105 +1385,87 @@ tr span {
 /* ********************************* Responsive style for mobile device ********************* */
 
 
-
-/* Mobile responsive  Nav-section start*/
-@media (max-width: 576px) {
-    .logo {
-        display: flex;
-        flex-direction: row !important;
-        /* Ensure row direction */
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 16px;
-    }
-
-    .Testpan-logo,
-    .bookmytest-logo {
-        width: 60px !important;
-        height: auto;
-    }
-
-    .back-btn {
-        padding: 10px;
-        min-width: fit-content;
-    }
-}
-
-/* Mobile responsive  Nav-section end*/
-
-
-
-
-/* Sidebar toggle and responsiveness */
-/* Hamburger icon */
+/* Desktop me hamburger hide */
 .hamburger {
     display: none;
-    flex-direction: column;
+    font-size: 20px;
     cursor: pointer;
-    gap: 4px;
 }
 
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: #333;
-    display: block;
-    border-radius: 2px;
-}
-
-/* Sidebar toggle and responsiveness */
+/* Mobile view me hamburger show */
 @media (max-width: 768px) {
     .hamburger {
-        display: flex;
-        position: absolute;
-        left: 15px;
-        top: 15px;
-        z-index: 1001;
+        display: block;
+        padding: 10px;
+        background: #f5f5f5;
     }
 
-    .project-sidebar {
-        position: fixed;
+    /* Mobile me aside by default hide */
+    #mobileSidebar {
+        display: none;
+        position: fixed; 
         top: 0;
-        left: -100%;
-        width: 250px;
-        height: 100vh;
-        background: #f8f9fa;
-        z-index: 1000;
-        transition: left 0.3s ease-in-out;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-    }
-
-    .project-sidebar.active {
         left: 0;
+        width: 250px;
+        height: 100%;
+        background: white;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
     }
 
-    .project-wrapper {
-        flex-direction: column;
+    /* Sidebar open hone par show */
+    #mobileSidebar.active {
+        display: block;
+    }
+}
+
+
+
+
+/* table or navigation responsive code  */
+@media (max-width: 768px) {
+    .nav-cnt {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .project-content {
-        width: 100%;
-        margin-left: 0 !important;
-    }
-
-    /* Make table scrollable */
-    .project-table {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .project-table table {
-        min-width: 600px;
-        width: 100%;
-    }
-
-    .project-btn-cnt {
+    /* Input & Button Responsive */
+    .top-bar {
+        display: flex;
         flex-direction: column;
         gap: 10px;
+        width: 100%;
+
     }
 
-    th, td {
-        font-size: 14px;
-        white-space: nowrap;
+    .right-cnt {
+        width: 100%;
+        margin: 0;
+    }
+
+    .input-import-cnt {
+        width: 100%;
+        display: none;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .import-box {
+        width: 100%;
+    }
+
+    /* Table scroll */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 600px;
+
     }
 }
