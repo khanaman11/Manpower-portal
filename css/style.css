@@ -1383,7 +1383,12 @@ tr span {
 
 
 /* ********************************* Responsive style for mobile device ********************* */
-
+@media (max-width:786px) {
+    .back-btn{
+        width:  -webkit-fill-available;
+        
+    }
+}
 
 /* Desktop me hamburger hide */
 .hamburger {

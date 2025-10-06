@@ -18,26 +18,36 @@
 
 
 <body>
-    <!-- ***************************** logo section start ******************* -->
+    <!-- ***************************** header section start ******************* -->
     <div class="logo d-flex justify-content-between align-item-center pt-2 px-4 position-sticky top-0 header Zindex">
         <img src="./image/logo.png" alt="Testpan Logo" class="Testpan">
         <img src="./image/bmtc-logo.png" alt="bookmytest" class="bookmytest-logo">
     </div>
-    <!-- ***************************** Logo section end ******************** -->
+    <!-- ***************************** header section end ******************** -->
 
 
     <!-- ****************** Signup section start ********************** -->
-    <div class="signup-section info-box active" id="signupSection">
-        <div class="signup-container">
-            <div class="left-image"></div>
-            <div class="right-form">
-                <h3>Create your Account</h3>
+
+    <div class="container signup-section info-box active" id="signupSection">
+        <div class="row signup-container align-items-center">
+
+            <!-- Left Image Section -->
+            <div class="col-md-6 d-none d-md-block left-image">
+                <!-- You can add background-image via CSS -->
+            </div>
+
+            <!-- Right Form Section -->
+            <div class="col-md-6 col-12 right-form p-4">
+                <h3 class="mb-4 text-center">Create your Account</h3>
+
                 <form>
+                    <!-- Email Field -->
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control input-bg" id="email" placeholder="abcd@gmail.com"
                             required>
                     </div>
+
                     <!-- Password Field -->
                     <div class="mb-3 position-relative">
                         <label for="password" class="form-label">Password</label>
@@ -45,7 +55,7 @@
                             placeholder="Enter password" required minlength="6">
                         <i class="bi bi-eye position-absolute" id="togglePasswordIcon"
                             onclick="togglePassword('password', 'togglePasswordIcon')"
-                            style="top: 32px; right: 15px; cursor: pointer;"></i>
+                            style="top: 38px; right: 15px; cursor: pointer;"></i>
                     </div>
 
                     <!-- Confirm Password Field -->
@@ -55,10 +65,10 @@
                             placeholder="Confirm password" required>
                         <i class="bi bi-eye position-absolute" id="toggleConfirmPasswordIcon"
                             onclick="togglePassword('confirmPassword', 'toggleConfirmPasswordIcon')"
-                            style="top: 32px; right: 15px; cursor: pointer;"></i>
+                            style="top: 38px; right: 15px; cursor: pointer;"></i>
                     </div>
 
-
+                    <!-- Terms Checkbox -->
                     <div class="form-check mb-3">
                         <input class="form-check-input" type="checkbox" id="agree">
                         <label class="form-check-label" for="agree">
@@ -66,15 +76,19 @@
                         </label>
                     </div>
 
+                    <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary w-100 next-btn">Sign up</button>
 
-                    <div class="login-link-cnt">
-                        Already have an account? <a href="#" class="login-link" onclick="showLogin()">Log in</a>
+                    <!-- Login Link -->
+                    <div class="text-center mt-3 login-link-cnt">
+                        Already have an account?
+                        <a href="#" class="login-link" onclick="showLogin()">Log in</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
     <!-- ****************** Signup section end ********************** -->
 
 
@@ -98,6 +112,7 @@
             <button class="btn btn-primary w-100 next-btn">Verify</button>
         </div>
     </div>
+
     <!-- ******************** Email-verify-section end ******************* -->
 
 
